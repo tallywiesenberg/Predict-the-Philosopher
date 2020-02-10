@@ -1,0 +1,5 @@
+French translation slightly alters the meaning of the Greek text, which can be found 
+in the Corpus Medicorum Graecorum. 
+
+
+
