@@ -1,5 +1,0 @@
-control the behavior of a rat by winning its loyalty rather than 
-by the proper scheduling of reinforcement. 
-
-An added advantage of this new, more scientific approach is 
-that it will “modify the attitudes with wdiich counterinsurgency 
