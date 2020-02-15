@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 import pandas as pd
 import pickle
 import spacy
-
+nlp = spacy.load("en_core_web_lg")
 #Initiate app
 app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 server = app.server
@@ -40,7 +40,6 @@ app.layout = html.Div(children=[
 
 def get_doc_vectors(words):
     # converts a doc into a vector
-    nlp = spacy.load("en_core_web_lg")
     return nlp(words).vector
 
 @app.callback(
@@ -53,8 +52,7 @@ def display_results(text, k):
     model = pickle.load(file)
     file.close()
     vector = get_doc_vectors(text)
-    new_obs = [vector]
-    pred = model.predict(new_obs)
+    pred = model.predict(vector.reshape(1, -1))[0]
     return f'The author most likely to have written your sample, "{text}", is {pred}.'
 
 #Execute the app
