@@ -14,7 +14,7 @@ app.title='Internet Archive Author Prediction'
 
 #Layout
 app.layout = html.Div(children=[
-    html.H1('Author Classification w/ Internet Archive'),
+    html.H1('Author Classification: Foucault or Chomsky'),
     html.Div([
         html.H6('Input Sample text here (at least 20 chars):'),
         dcc.Textarea(
