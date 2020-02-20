@@ -1,16 +1,26 @@
+import db
+from db import load_data, populate_table
+import words
+from words import get_doc_vectors, load_2d_vectors
 import dash
 from dash.dependencies import Input, Output, State
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-import pandas as pd
+import plotly_express as px
 import pickle
-import spacy
-nlp = spacy.load("en_core_web_lg")
+
 #Initiate app
 app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 server = app.server
-app.title='Internet Archive Author Prediction'
+app.title='Michel Foucault vs. Noam Chomksy Author Prediction'
+
+#Populate Database
+df = load_data()
+# populate_table()
+
+#Load 2D Vectors for Graph
+vectors = load_2d_vectors()
 
 #Layout
 app.layout = html.Div(children=[
@@ -23,13 +33,14 @@ app.layout = html.Div(children=[
         ),
         html.H6('# of Neighbors'),
         html.Br(),
-        dcc.Dropdown(
-            id='k-drop',
-            options=[{'label':i, 'value':i} for i in range(5, 25, 5)],
-            value=5
-        ),
-        html.H6(id='output-message', children='output will go here')
-
+        html.H6(id='output-message', children='output will go here'),
+        html.Br(),
+        html.H3('Document Vectors in Two Dimensions Colored by Author'),
+        dcc.Graph(
+            id='graph', style={'width': '75%', 'display': 'inline-block'},
+            figure=px.scatter(
+                x=vectors[:,0], y=vectors[:,1], color=df['author']
+            ))
     ]),
     html.Br(),
     html.A('Code on github:', href='https://github.com/tallywiesenberg/Predict-the-Philosopher')
@@ -38,22 +49,22 @@ app.layout = html.Div(children=[
 
 #Ineractive callbacks
 
-def get_doc_vectors(words):
-    # converts a doc into a vector
-    return nlp(words).vector
-
 @app.callback(
     Output('output-message', 'children'),
-    [Input('text-input', 'value'),
-     Input('k-drop', 'value')]
+    [Input('text-input', 'value')]
     )
-def display_results(text, k):
-    file = open(f'./models/model_k{k}.pkl', 'rb')
-    model = pickle.load(file)
-    file.close()
-    vector = get_doc_vectors(text)
-    pred = model.predict(vector.reshape(1, -1))[0]
-    return f'The author most likely to have written your sample, "{text}", is {pred}.'
+def display_results(text):
+    if len(text) < 20:
+        return ''
+    else:
+        file = open(f'./models/model_k10.pkl', 'rb')
+        model = pickle.load(file)
+        file.close()
+        vector = get_doc_vectors(text)
+        pred = model.predict(vector.reshape(1, -1))[0]
+        return f'The author most likely to have written your sample, "{text}", is {pred}.'
+
+# @app.callback(Output("graph", "figure"), [Input()])
 
 #Execute the app
 if __name__ == "__main__":
