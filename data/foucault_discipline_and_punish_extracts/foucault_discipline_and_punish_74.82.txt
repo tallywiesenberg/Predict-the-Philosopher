@@ -1,0 +1,2 @@
+I. Divide duration into successive or parallel segments, each of 
+which must end at a specific time. For example, isolate the period 

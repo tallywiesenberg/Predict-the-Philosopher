@@ -1,0 +1,2 @@
+network ‘holds’ the whole together and traverses it in its entirety 
+with effects of power that derive from one another: supervisors, 

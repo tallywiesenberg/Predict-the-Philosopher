@@ -1,0 +1,2 @@
+has the function of treating multiplicity itself, distributing it and 
+deriving from it as many effects as possible. Whereas natural 

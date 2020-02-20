@@ -1,0 +1,2 @@
+relation that depends as little as possible on status and its 
+external forms, for this relation is fulfilled in the sovereignty 

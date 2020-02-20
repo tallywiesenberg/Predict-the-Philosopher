@@ -31,7 +31,6 @@ app.layout = html.Div(children=[
             id='text-input',
             placeholder='Try out a text sample!',
         ),
-        html.H6('# of Neighbors'),
         html.Br(),
         html.H6(id='output-message', children='output will go here'),
         html.Br(),
@@ -57,7 +56,7 @@ def display_results(text):
     if len(text) < 20:
         return ''
     else:
-        file = open(f'./models/model_k10.pkl', 'rb')
+        file = open(f'./models/model_k2.pkl', 'rb')
         model = pickle.load(file)
         file.close()
         vector = get_doc_vectors(text)

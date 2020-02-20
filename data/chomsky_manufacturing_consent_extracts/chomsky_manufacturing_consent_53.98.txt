@@ -1,0 +1,2 @@
+The quality of coverage should also be displayed more directly and 
+crudely in placement, headlining, word usage, and other modes of 

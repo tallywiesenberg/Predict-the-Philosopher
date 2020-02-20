@@ -1,0 +1,2 @@
+
+relations that the body must have with the object that it manipulates. 

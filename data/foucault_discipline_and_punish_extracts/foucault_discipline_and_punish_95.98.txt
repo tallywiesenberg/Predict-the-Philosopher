@@ -1,0 +1,2 @@
+pheric building is divided into cells, each of which extends the whole 
+width of the building; they have two windows, one on the inside, 

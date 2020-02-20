@@ -1,0 +1,2 @@
+fibers which receive it; as a result, tension increases in the other 
+fibers, which become more rigid and at the same time susceptible 

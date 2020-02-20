@@ -1,0 +1,2 @@
+behave as one should: “practical” texts, which are themselves 
+objects of a “practice” in that they were designed to be read, 
