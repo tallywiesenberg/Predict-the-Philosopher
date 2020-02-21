@@ -1,2 +1,0 @@
-rule: that the rule be made to function as a minimal threshold, as 
-an average to be respected or as an optimum towards which one 

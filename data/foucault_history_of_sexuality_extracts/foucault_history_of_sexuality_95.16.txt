@@ -1,2 +1,0 @@
-ductive function; these consisted of two positional values: that 
-of the subject and that of the object, that of the agent and that 

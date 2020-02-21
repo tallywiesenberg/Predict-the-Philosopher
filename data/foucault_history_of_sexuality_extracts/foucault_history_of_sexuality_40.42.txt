@@ -1,2 +1,0 @@
-series of discontinuous segments whose tactical function is 
-neither uniform nor stable. To be more precise, we must not 

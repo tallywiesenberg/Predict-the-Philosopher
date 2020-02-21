@@ -1,2 +1,0 @@
-number of simple gestures (rest, bend); lastly, it fixes the canonical 
-succession in which each of these correlations occupies a particular 

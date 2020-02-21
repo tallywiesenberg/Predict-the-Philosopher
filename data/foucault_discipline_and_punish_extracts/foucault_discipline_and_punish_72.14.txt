@@ -1,2 +1,0 @@
-articulations is defined; to each movement are assigned a direction, 
-an aptitude, a duration; their order of succession is prescribed. Time 

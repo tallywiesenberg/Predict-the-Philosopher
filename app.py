@@ -56,8 +56,9 @@ def display_results(text):
     if len(text) < 20:
         return ''
     else:
+        #Open KNN model
         file = open(f'./models/model_k2.pkl', 'rb')
-        model = pickle.load(file)
+        knn = pickle.load(file)
         file.close()
         vector = get_doc_vectors(text)
         pred = model.predict(vector.reshape(1, -1))[0]

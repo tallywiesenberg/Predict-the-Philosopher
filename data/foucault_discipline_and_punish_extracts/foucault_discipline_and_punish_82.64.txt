@@ -1,2 +1,0 @@
-gate that prevents entering or leaving - began to be replaced by the 
-calculation of openings, of filled and empty spaces, passages and 

@@ -1,2 +1,0 @@
-the ordinary step will last one second, during which two double 
-steps would be performed; the duration of the marching step will be 

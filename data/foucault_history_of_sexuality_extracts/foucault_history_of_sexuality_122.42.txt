@@ -1,2 +1,0 @@
-part, in its beginning, is especially concerned with situational 
-variables. 

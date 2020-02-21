@@ -1,2 +1,0 @@
-
-Shift the object and change the scale. Define new tactics in order 

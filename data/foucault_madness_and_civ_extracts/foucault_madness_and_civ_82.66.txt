@@ -1,2 +1,0 @@
-the communicating element of the taint. It is sufficient to 
-remember the value, both moral and medical, ascribed at about 

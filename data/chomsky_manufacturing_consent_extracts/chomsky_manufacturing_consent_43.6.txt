@@ -1,2 +1,0 @@
-is a voting system weighted by income! 
-

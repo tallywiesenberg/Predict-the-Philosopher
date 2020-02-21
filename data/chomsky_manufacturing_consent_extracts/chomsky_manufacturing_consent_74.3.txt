@@ -1,2 +1,0 @@
-the effects of client state elections (as we show in chapter 3 with regard 
-to El Salvador). 

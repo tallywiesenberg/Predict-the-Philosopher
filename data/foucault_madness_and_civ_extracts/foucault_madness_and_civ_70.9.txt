@@ -1,2 +1,0 @@
-running: simple walking, which both limbers and strengthens the 
-body; running at an ever increasing speed, which better 

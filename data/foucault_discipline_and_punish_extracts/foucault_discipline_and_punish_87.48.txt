@@ -1,2 +1,0 @@
-progress; and those of the top classes will similarly descend into the 
-others if they become slack and if the various reports taken together 

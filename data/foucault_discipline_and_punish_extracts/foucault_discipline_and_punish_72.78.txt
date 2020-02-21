@@ -1,2 +1,0 @@
-parts of the object manipulated (barrel, notch, hammer, screw, etc.); 
-then the two sets of parts are correlated together according to a 

@@ -1,2 +1,0 @@
-value” of a set of alternatives, it is not enough to sum up the separate 
-values; one must also weight responses by probability of occurrence. 

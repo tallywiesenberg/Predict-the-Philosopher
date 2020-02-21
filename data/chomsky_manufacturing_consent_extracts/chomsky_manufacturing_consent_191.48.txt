@@ -1,2 +1,0 @@
-tion, selects facts in accordance with the requirements of that model, and 
-bypasses conflicting facts and interpretations. 1 

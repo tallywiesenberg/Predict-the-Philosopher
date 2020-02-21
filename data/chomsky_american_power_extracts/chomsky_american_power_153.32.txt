@@ -1,2 +1,0 @@
-will not respond to an all-out counter-value attack, and therefore 
-it should be launched without delay. Of course, one can carry 

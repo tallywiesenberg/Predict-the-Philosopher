@@ -1,2 +1,0 @@
-require a certificate signed by a medical person.... It should also 
-be stated whether the patient is afflicted with any complaint 
