@@ -1,6 +1,9 @@
 import db
 from db import load_data, populate_table
+import pickles
+from pickles import load_knn, load_nb
 import words
+from words import tokenize
 from words import get_doc_vectors, load_2d_vectors
 import dash
 from dash.dependencies import Input, Output, State
@@ -36,7 +39,7 @@ app.layout = html.Div(children=[
         html.Br(),
         html.H3('Document Vectors in Two Dimensions Colored by Author'),
         dcc.Graph(
-            id='graph', style={'width': '75%', 'display': 'inline-block'},
+            id='graph', style={'width': '50%', 'display': 'inline-block'},
             figure=px.scatter(
                 x=vectors[:,0], y=vectors[:,1], color=df['author']
             ))
@@ -44,7 +47,6 @@ app.layout = html.Div(children=[
     html.Br(),
     html.A('Code on github:', href='https://github.com/tallywiesenberg/Predict-the-Philosopher')
 ])
-
 
 #Ineractive callbacks
 
@@ -54,18 +56,25 @@ app.layout = html.Div(children=[
     )
 def display_results(text):
     if len(text) < 20:
-        return ''
+        pass
     else:
-        #Open KNN model
-        file = open(f'./models/model_k2.pkl', 'rb')
-        knn = pickle.load(file)
-        file.close()
+        #Load models
+        nb = load_nb()
+        knn = load_knn()
+        #Nearest Sample
+        pred = nb.predict([text])
         vector = get_doc_vectors(text)
-        pred = model.predict(vector.reshape(1, -1))[0]
-        return f'The author most likely to have written your sample, "{text}", is {pred}.'
+        new_obs = vector.reshape(1, -1)
+        new_obs_2d = knn.named_steps['pca'].transform(new_obs)
+        index = knn.named_steps['kneighborsclassifier'].kneighbors(new_obs_2d)[1][0][0]
+        nn = df['extracts'][index]
+        #Predict Authorship
+        pred = nb.predict([text])[0]
+        return f'The author most likely to have written your sample, "{text}", is {pred}. \n The most similar sample from the collection is "{nn}"'
 
 # @app.callback(Output("graph", "figure"), [Input()])
 
 #Execute the app
 if __name__ == "__main__":
+    
     app.run_server()

@@ -21,6 +21,7 @@ psycopg2 = "*"
 python-decouple = "*"
 sqlalchemy = "*"
 imbalanced-learn = "*"
+internetarchive = "*"
 
 [requires]
 python_version = "3.7"

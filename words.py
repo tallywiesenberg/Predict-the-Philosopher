@@ -6,9 +6,7 @@ nlp = spacy.load("en_core_web_lg")
 
 def get_doc_vectors(words):
     # converts a list of words into their word vectors
-    tokens = tokenize(words)
-    string = ' '.join(tokens)
-    return nlp(string).vector
+    return nlp(words).vector
 
 def load_2d_vectors():
     '''Load PCA 2d document vectors from Pickle file'''

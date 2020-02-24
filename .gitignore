@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+#EPUBS
+epubs/
+
 # Distribution / packaging
 .Python
 build/
