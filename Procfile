@@ -1,1 +1,1 @@
-web: gunicorn dep:app
+heroku ps:scale web=1
