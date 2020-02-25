@@ -27,6 +27,8 @@ epub-conversion = "*"
 xml-cleaner = "*"
 dash-bootstrap-components = "*"
 nltk = "*"
+heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
