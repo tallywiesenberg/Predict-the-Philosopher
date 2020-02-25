@@ -22,6 +22,11 @@ python-decouple = "*"
 sqlalchemy = "*"
 imbalanced-learn = "*"
 internetarchive = "*"
+ebooklib = "*"
+epub-conversion = "*"
+xml-cleaner = "*"
+dash-bootstrap-components = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.7"
