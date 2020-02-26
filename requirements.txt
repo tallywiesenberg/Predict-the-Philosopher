@@ -20,7 +20,7 @@ dash-renderer==1.1.2
 dash-table==4.4.1
 decorator==4.4.1
 defusedxml==0.6.0
-en-core-web-md==2.2.5
+# en-core-web-md==2.2.5
 entrypoints==0.3
 Flask==1.1.1
 Flask-Compress==1.4.0
