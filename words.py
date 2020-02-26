@@ -2,7 +2,7 @@ import pickle
 import spacy
 
 #Load spacy model
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_md")
 
 def get_doc_vectors(words):
     # converts a list of words into their word vectors

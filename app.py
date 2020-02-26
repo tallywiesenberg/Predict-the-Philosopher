@@ -11,7 +11,7 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-import plotly_express as px
+import plotly.express as px
 import pickle
 
 #Initiate app
@@ -19,9 +19,8 @@ app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen
 server = app.server
 app.title='Michel Foucault vs. Noam Chomksy Author Prediction'
 
-#Populate Database
+#Load df from pickle file
 df = load_data()
-# populate_table()
 
 #Load 2D Vectors for Graph
 vectors = load_2d_vectors()
