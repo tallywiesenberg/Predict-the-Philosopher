@@ -6,5 +6,5 @@ import sqlalchemy
 
 #Load Pandas CSV from Pickle file
 def load_data():
-    df = pickle.load(open('./data/dataframe.pkl', 'rb'))
+    df = pd.read_csv('./data/dataframe.csv')
     return df

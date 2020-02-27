@@ -1,5 +1,6 @@
 from words import tokenize
 import pickle
+from gensim.parsing.preprocessing import preprocess_string
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
 def load_knn():

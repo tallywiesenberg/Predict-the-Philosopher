@@ -42,7 +42,7 @@ app.layout = html.Div(children=[
         dcc.Graph(
             id='graph', style={'width': '50%', 'display': 'inline-block'},
             figure=px.scatter(
-                x=vectors[:,0], y=vectors[:,1], color=df['author']
+                x=df['x'], y=df['y'], color=df['author']
             ))
     ]),
     html.Br(),

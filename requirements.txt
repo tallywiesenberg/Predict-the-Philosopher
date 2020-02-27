@@ -10,3 +10,5 @@ imbalanced-learn
 python-decouple
 psycopg2
 SQLAlchemy
+gensim
+nltk
