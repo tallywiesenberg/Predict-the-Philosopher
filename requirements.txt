@@ -10,3 +10,4 @@ imbalanced-learn
 python-decouple
 psycopg2
 SQLAlchemy
+en_core_web_md
