@@ -3,8 +3,7 @@ from db import load_data
 import pickles
 from pickles import load_knn, load_nb
 import words
-from words import tokenize
-from words import get_doc_vectors, load_2d_vectors
+from words import load_2d_vectors
 import dash
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc

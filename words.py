@@ -1,9 +1,5 @@
 import pickle
 
-def get_doc_vectors(words):
-    # converts a list of words into their word vectors
-    return nlp(words).vector
-
 def load_2d_vectors():
     '''Load PCA 2d document vectors from Pickle file'''
     array = open('./models/word_vectors.pkl', 'rb')
