@@ -6,3 +6,5 @@ plotly
 gunicorn
 matplotlib
 spacy
+imbalanced-learn
+python-decouple
