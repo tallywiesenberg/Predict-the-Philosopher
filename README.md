@@ -1,2 +1,2 @@
 # Predict-the-Philosopher
-NLP Project to predict philosophy passage authorship.
+In order to search for a difference in the writing styles and topics of philosophers Michel Foucault and Noam Chomsky, who famously debated in 1971, I decided to run an NLP Project to predict the authorship of a selected passage or a famous quote by either author. The model I chose was trained on 3 full books by each author, credits to the Internet Archive for sourcing the text files for the books.
