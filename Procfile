@@ -1,1 +1,1 @@
-web: gunicorn philosophy-authorship:app.py
+web: gunicorn app:app
