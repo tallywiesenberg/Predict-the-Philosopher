@@ -1,4 +1,3 @@
-from words import tokenize
 import pickle
 from gensim.parsing.preprocessing import preprocess_string
 from sklearn.naive_bayes import MultinomialNB

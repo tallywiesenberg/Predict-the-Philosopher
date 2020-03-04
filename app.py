@@ -3,7 +3,7 @@ from db import load_data
 import pickles
 from pickles import load_knn, load_nb
 import words
-from words import load_2d_vectors
+from words import load_2d_vectors, get_doc_vectors
 import dash
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
@@ -41,7 +41,7 @@ app.layout = html.Div(children=[
         dcc.Graph(
             id='graph', style={'width': '50%', 'display': 'inline-block'},
             figure=px.scatter(
-                x=df['x'], y=df['y'], color=df['author']
+                x=vectors[:, 0], y=vectors[:, 1], color=df['author']
             ))
     ]),
     html.Br(),
