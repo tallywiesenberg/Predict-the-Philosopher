@@ -1,1 +1,1 @@
-web: gunicorn Predict-the-Philosopher:app
+web: gunicorn philosophy-authorship:APP -t 120

@@ -76,7 +76,7 @@ def display_similar(text):
         knn = load_knn()
         #Nearest Sample
         vector = get_doc_vectors(text)
-        new_obs = vector.reshape(1, -1)
+        new_obs = vector.reshape(-1, 1)
         new_obs_2d = knn.named_steps['pca'].transform(new_obs)
         index = knn.named_steps['kneighborsclassifier'].kneighbors(new_obs_2d)[1][0][0]
         nn = df['extracts'][index]
