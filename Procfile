@@ -1,1 +1,1 @@
-web: gunicorn philosophy-authorship:APP -t 120
+web: gunicorn core:APP -t 120
