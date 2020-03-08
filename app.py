@@ -1,5 +1,5 @@
-import .db
-from .db import load_data
+import db
+from db import load_data
 import pickles
 from pickles import load_knn, load_nb
 import words
