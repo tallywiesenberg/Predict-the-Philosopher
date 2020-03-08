@@ -1,5 +1,3 @@
-import db
-from db import load_data
 import pickles
 from pickles import load_knn, load_nb
 import words
@@ -37,15 +35,10 @@ app.layout = html.Div(children=[
         dbc.Col(html.H3(id='output-author', children='output will go here')),
         dbc.Col(html.H6(id='output-sample', children='output will go here')),
         html.Br(),
-        html.H3('Document Vectors in Two Dimensions Colored by Author'),
-        dcc.Graph(
-            id='graph', style={'width': '50%', 'display': 'inline-block'},
-            figure=px.scatter(
-                x=vectors[:, 0], y=vectors[:, 1], color=df['author']
-            ))
+        html.H3('Document Vectors in Two Dimensions Colored by Author')
     ]),
     html.Br(),
-    html.A('Code on github:', href='https://github.com/tallywiesenberg/Predict-the-Philosopher')
+    html.A('Github Repository:', href='https://github.com/tallywiesenberg/Predict-the-Philosopher')
 ])
 
 #Ineractive callbacks
