@@ -16,9 +16,6 @@ app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen
 server = app.server
 app.title='Michel Foucault vs. Noam Chomksy Author Prediction'
 
-#Load df from pickle file
-df = load_data()
-
 #Load 2D Vectors for Graph
 vectors = load_2d_vectors()
 
